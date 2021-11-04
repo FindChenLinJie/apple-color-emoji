@@ -1,7 +1,7 @@
 {
-  "name": "apple-color-emoji-mac10155",
+  "name": "apple-color-emoji-catalina-10155",
   "version": "1.0.1",
-  "description": "Replace emoji in your strings with images from the Apple Color Emoji font",
+  "description": "Replace emoji in your strings with images from the Apple Color Emoji c",
   "repository": {
     "type": "git",
     "url": "git://github.com/devongovett/apple-color-emoji.git"
@@ -22,5 +22,8 @@
   "scripts": {
     "test": "mocha",
     "prepublish": "node build.js"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

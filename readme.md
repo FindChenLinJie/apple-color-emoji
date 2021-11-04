@@ -1,17 +1,17 @@
 # apple-color-emoji
 
 Extracts emoji images from the Apple Color Emoji font using [fontkit](http://github.com/devongovett/fontkit), 
-and generates a regular expression that can be used to replace emoji in strings with `<img>` tags if 
+and generates a regular expression from mac catalina 10.15.5 that can be used to replace emoji in strings with `<img>` tags if 
 the current browser or platform does not have native support.
 
 ## Installation
 
-    npm install apple-color-emoji
+    npm install apple-color-emoji-catalina-10155
 
 ## Example
 
 ```javascript
-var emoji = require('apple-color-emoji');
+var emoji = require('apple-color-emoji-catalina-10155');
 
 // configure
 emoji.imageDir // the directory where the images are located (on the server)
