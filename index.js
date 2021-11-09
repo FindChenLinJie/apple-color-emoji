@@ -4,23 +4,6 @@ exports.imageDir = path.join(__dirname, 'images');
 exports.basePath = exports.imageDir;
 exports.regex = require('./regex');
 
-// Detect native browser support for emoji
-exports.nativeSupport = (function() {
-  if (typeof document === 'undefined')
-    return false;
-
-  var canvas = document.createElement('canvas');
-  if (!canvas.getContext)
-    return false;
-
-  var ctx = canvas.getContext('2d');
-  ctx.textBaseline = 'top';
-  ctx.font = '32px sans-serif';
-  ctx.fillText('😃', 0, 0);
-
-  return ctx.getImageData(16, 16, 1, 1).data[0] !== 0;
-})();
-
 function getImage(str) {
   // strip unicode variation selectors
   str = str.replace(/[\ufe00-\ufe0f\u200d]/g, '');
